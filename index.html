@@ -25,9 +25,9 @@
   <header>
     <nav class="container-fluid">
       <div class="row">
-        <div class="col-md-4"><a href="#">Hats</a></div>
-        <div class="col-md-4"><a href="#">Gloves</a></div>
-        <div class="col-md-3"><a href="#">Scarves</a></div>
+        <div class="col-md-4 navigation"><a href="#">Hats</a></div>
+        <div class="col-md-4 navigation"><a href="#">Gloves</a></div>
+        <div class="col-md-3 navigation"><a href="#">Scarves</a></div>
         <div class="cart-info col-md-1">
           <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         </div>
@@ -46,7 +46,7 @@
 
   <main>
 
-        <!-- <aside class="col-md-2 mailing-list">
+    <!-- <aside class="col-md-2 mailing-list">
           <form id="mail-list">
             <div class="group-form">
               <label>Sign up for our mailing list:
@@ -60,123 +60,135 @@
           </div>
         </div>
         </aside> -->
-  <div class="container-fluid">
-    <div class="row">
-      <aside class="col-md-2 product-filter">
-        <form class="sort">
-          <div class="collection-sort">
-            <label>Filter by:</label>
-            <select>
-              <option value="/">Choose One</option>
-              <option value="/">Price</option>
-              <option value="/">Color</option>
-              <option value="/">Brand</option>
+
+  <!-- filter -->
+   <!-- <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md-2">
+          <label class="filter">Filter by:</label>
+            <select class="input-aside" id="filterSelect" name="filter">
+              <option value="">Choose One</option>
+              <option value="p">Price</option>
+              <option value="f">Free Shipping</option>
+              <option value="b">Brand</option>
             </select>
-            <input type="submit" value="Sort"  >
-        </form>
-      </aside>
+          <input type="submit" value="Sort" id="sort" name="sort" class="input-aside">
+        </aside> -->
 
 
+    <!-- Mailing List  -->
+     <div class="container-fluid">
+      <div class="row"> 
 
-
-    <section class="col-md-10">
-        <h2>Scarves</h2>
-
-        <div class="product-container">
-
-          <div class="products">
-            <div class="product-image">
-              <h3>Reversible Plaid</h3>
-              <img src="images/reversible-plaid.jpg" alt="reversible plaid scarf">
+        <aside class="col-md-2 mailing-list">
+          <form id="mail-form" class="">
+            <div class="form-group">
+              <label for="email" class="sign-up">Sign up for our mailing list:</label>
+              <input type="email" id="email" name="email" class="form-control">
             </div>
-            <div class="product-info">
-              <h5>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</h5>
-              <h6 class="price">26.99</h6>
-            </div>
-          </div>
+            <input type="submit" value="Submit" class="input-aside">
+          </form>
+        </aside>
 
-          <div class="products">
-            <div class= "product-image">
-              <h3>Fringed Plaid</h3>
-              <img src="images/fringed-plaid.jpeg" alt="fringed plaid scarf">
-            </div>
-            <div class="product-info">
-              <h5>Generously sized, extra soft and featuring a dazzling fringe, this scarf is rendered in a versatile gray, black and white plaid. Expertly beat the cold with style. 100% acrylic.</h5>
-              <h6>18.99</h6>
-            </div>
-          </div>
 
-          <div class="products">
-            <div class= "product-image">
-              <h3>Multi Color</h3>
-              <img src="images/multi-color.jpeg" alt="multi color scarf">
+        <section class="col-md-10">
+          <h2>Scarves</h2>
+
+          <div class="product-container">
+
+            <div class="products">
+              <div class="product-image">
+                <h3>Reversible Plaid</h3>
+                <img src="images/reversible-plaid.jpg" alt="reversible plaid scarf">
+              </div>
+              <div class="product-info">
+                <h5>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</h5>
+                <h6 class="price">26.99</h6>
+              </div>
             </div>
-            <div class="product-info">
-              <h5>The Who What Where Oversize Color-Block Square Scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit; soft
+
+            <div class="products">
+              <div class="product-image">
+                <h3>Fringed Plaid</h3>
+                <img src="images/fringed-plaid.jpeg" alt="fringed plaid scarf">
+              </div>
+              <div class="product-info">
+                <h5>Generously sized, extra soft and featuring a dazzling fringe, this scarf is rendered in a versatile gray, black and white plaid. Expertly beat the cold with style. 100% acrylic.</h5>
+                <h6 class="price">18.99</h6>
+              </div>
+            </div>
+
+            <div class="products">
+              <div class="product-image">
+                <h3>Multi Color</h3>
+                <img src="images/multi-color.jpeg" alt="multi color scarf">
+              </div>
+              <div class="product-info">
+                <h5>The Who What Where Oversize Color-Block Square Scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit; soft
                 and lush, it’s your stylish standoff against cold AC and unexpected fall breezes. 100% acrylic.</h5>
-              <h6 class="price">22.99</h6>
+                <h6 class="price">22.99</h6>
+              </div>
             </div>
-          </div>
 
-          <div class="products">
-            <div class="product-image">
-              <h3>Northern Lights</h3>
-              <img src="images/northern-lights.jpg" alt="northern lights scarf">
+            <div class="products">
+              <div class="product-image">
+                <h3>Northern Lights</h3>
+                <img src="images/northern-lights.jpg" alt="northern lights scarf">
+              </div>
+              <div class="product-info">
+                <h5>Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.</h5>
+                <h6 class="price">29.99</h6>
+              </div>
             </div>
-            <div class="product-info">
-              <h5>Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.</h5>
-              <h6 class="price">29.99</h6>
-            </div>
-          </div>
 
-          <div class="products">
-            <div class="product-image">
-              <h3>Ombre Infinity</h3>
-              <img src="images/ombre-infinity.jpg" alt="ombre infinity scarf">
+            <div class="products">
+              <div class="product-image">
+                <h3>Ombre Infinity</h3>
+                <img src="images/ombre-infinity.jpg" alt="ombre infinity scarf">
+              </div>
+              <div class="product-info">
+                <h5>A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.</h5>
+                <h6 class="price">11.99</h6>
+              </div>
             </div>
-            <div class="product-info">
-              <h5>A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.</h5>
-              <h6 class="price">11.99</h6>
-            </div>
-          </div>
 
-          <div class="products">
-            <div class="product-image">
-              <h3>Ashby Twill</h3>
-              <img src="images/twill.jpg" alt="ashby twill scarf">
-            </div>
-            <div class="product-info">
-              <h5>Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather
+            <div class="products">
+              <div class="product-image">
+                <h3>Ashby Twill</h3>
+                <img src="images/twill.jpg" alt="ashby twill scarf">
+              </div>
+              <div class="product-info">
+                <h5>Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather
                 gray fringe. 100% Merino wool.</h5>
-              <h6 class="price">70.99</h6>
+                <h6 class="price">70.99</h6>
+              </div>
             </div>
-          </div>
 
-          <div class="products">
-            <div class= "product-image">
-              <h3>Wool Cable Knit</h3>
-              <img src="images/wool-cable.jpeg" alt="wool cable knit scarf">
+            <div class="products">
+              <div class="product-image">
+                <h3>Wool Cable Knit</h3>
+                <img src="images/wool-cable.jpeg" alt="wool cable knit scarf">
+              </div>
+              <div class="product-info">
+                <h5>Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.</h5>
+                <h6 class="price">49.99</h6>
+              </div>
             </div>
-            <div class="product-info">
-              <h5>Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.</h5>
-              <h6 class="price">49.99</h6>
-            </div>
-          </div>
 
-          <div class="products">
-            <div class="product-image">
-              <h3>Etro Paisley-Print Silk</h3>
-              <img src="images/etro.png" alt="etro paisley print silk scarf">
-            </div>
-            <div class="product-info">
-              <h5>Luxurious silk scarf with subtle paisley pattern. 100% silk.</h5>
-              <h6 class="price">26.99</h6>
+            <div class="products">
+              <div class="product-image">
+                <h3>Etro Paisley-Print Silk</h3>
+                <img src="images/etro.png" alt="etro paisley print silk scarf">
+              </div>
+              <div class="product-info">
+                <h5>Luxurious silk scarf with subtle paisley pattern. 100% silk.</h5>
+                <h6 class="price">26.99</h6>
+              </div>
             </div>
           </div>
-        </div>
+          </div>
       </div>
-    </div>
-    </section>
+      </section>
   </main>
   <script type="text/javascript" src="js/script.js"></script>
   <!-- Latest compiled and minified JavaScript -->

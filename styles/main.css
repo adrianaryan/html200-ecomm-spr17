@@ -24,13 +24,13 @@ nav .row {
   text-align: center;
   font-size: 1rem;
   background-color: #3b8ede;
-  padding: .5rem 0;
+  padding: 1rem 0;
 }
 
 .cart-info {
   color: white;
 }
-.row a {
+.navigation a {
   color: white;
 }
 
@@ -63,9 +63,6 @@ h1 .logo-w {
 
 
 /**************** ASIDE ****************/
-.product-filter{
-  margin-top: 6rem;
-}
 
 select {
   margin-top: .25rem;
@@ -81,6 +78,19 @@ input[type="submit"] {
   border-radius: 5px;
   font-size: .75rem;
   color: white;
+}
+/*aside mailing list*/
+.sign-up{
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+.input-aside{
+  width: 100%;
+}
+
+aside{
+  margin-top: 6rem;
 }
 
 
@@ -132,7 +142,7 @@ h3 {
 }
 
 .products{
-  height: 35rem;
+  height: 38rem;
   width: 20rem;
   padding: 2%;
   border: 1px solid black;
@@ -147,5 +157,14 @@ h3 {
 }
 
 .products h3{
-  font-style: bold;
+  font-weight: 600;
+  color: #4d4d4d;
+}
+
+.product h5{
+  color: #4d4d4d;
+}
+.price {
+  margin-top: 1rem;
+  color: #360607;
 }
