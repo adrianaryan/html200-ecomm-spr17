@@ -140,7 +140,12 @@ h3 {
 }
 .product-image img {
   max-width: 100%;
+  margin-bottom: 1rem;
 }
 .product-info {
   margin-top: auto;
+}
+
+.products h3{
+  font-style: bold;
 }
