@@ -49,3 +49,15 @@ var products = [
   }
 ]
 
+
+function mailForm() {
+  event.preventDefault(); // preventing default mode
+  var mailAddress = document.mailList.email.value;
+  console.log("Thanks for signing up for our mailing list, " + mailAddress);;
+
+  
+
+
+
+
+}
