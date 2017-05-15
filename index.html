@@ -7,6 +7,10 @@
   <meta charset="utf-8">
 
   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.2.4/css/simple-line-icons.min.css'>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- Optional theme -->
@@ -29,7 +33,7 @@
         <div class="col-md-4 navigation"><a href="#">Gloves</a></div>
         <div class="col-md-3 navigation"><a href="#">Scarves</a></div>
         <div class="cart-info col-md-1">
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <i class="fa fa-shopping-cart" data-toggle="modal" data-target="#myModal" aria-hidden="true"><span class="badge">0</span></i></i>
         </div>
       </div>
     </nav>
@@ -83,12 +87,17 @@
 
             <div class="products">
               <div class="product-image">
-                <h3>Reversible Plaid</h3>
+                <h3 class="header">Reversible Plaid</h3>
                 <img src="images/reversible-plaid.jpg" alt="reversible plaid scarf">
               </div>
               <div class="product-info">
-                <h5>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</h5>
+                <h5 class="description">Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</h5>
                 <h6 class="price">26.99</h6>
+                <div class='btn'>Add to cart</div>
+                <div class='quickview'>Quickview</div>
+
+
+
               </div>
             </div>
 
@@ -172,10 +181,56 @@
             </div>
 
           </div>
-       </section>
-     </div>
+        </section>
+      </div>
     </div>
   </main>
+
+  <div class="modal fade" id="prodDetail" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 id="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p id="modal-id" hidden="hidden"></p>
+          <img src="./images/twill-200w.jpg" alt="" id="modal-image">
+          <p id="modal-description">Description goes here</p>
+          <p id="modal-price"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" id="detailAddToCart">Add to cart</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
   <script type="text/javascript" src="js/script.js"></script>
+  <script src="js/index.js"></script>
+
+  <div class='quickviewContainer'>
+    <div class='close'></div>
+    <h2 class='headline'></h2>
+    <p class='description'></p>
+    <img src='https://placeimg.com/100/100'>
+    <img src='https://placeimg.com/100/100'>
+    <img src='https://placeimg.com/100/100'>
+  </div>
+
+</body>
+
+
+
+
+
+
+
+
 
 </html>
