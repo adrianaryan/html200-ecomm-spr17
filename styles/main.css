@@ -15,24 +15,39 @@
   }
   /***************** NAV *****************/
 
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-  nav .row {
+  nav {
+    width: 100%;
     text-align: center;
-    font-size: 1rem;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
     background-color: #3b8ede;
-    padding: 1rem 0;
   }
 
-  .cart-info {
-    color: white;
+  nav ul li {
+    display: inline;
+    padding: 1rem;
+    width: 24.8%;
+    list-style: none;
   }
 
-  .navigation a {
-    color: white;
+  nav ul a {
+    color: #fff;
+    text-decoration: none;
   }
+  .navigation{
+    color: #fff;
+  }
+.navigation:hover{
+  color: #113f6c;
+  text-decoration: none;
+}
+
   /**************** HERO *****************/
 
   header img {
@@ -134,7 +149,7 @@
   }
 
   .products {
-    height: 38rem;
+    height: 42rem;
     width: 20rem;
     padding: 2%;
     border: 1px solid black;
@@ -166,111 +181,64 @@
   /**************** MEDIA QUERIES ****************/
 
   @media only screen and (max-width: 62rem) {
-    nav .navigation {
+    nav ul{
+      flex-direction: column;
+    }
+    nav ul li{
+      width: 100%;
+    }
+    nav li {
+      text-align: center;
+      list-style: none;
       border-bottom: 1px solid white;
     }
     nav .row {
       padding: 0;
     }
+
+    ul li:first-child {
+       order: 4;
+     }
+     ul li:nth-child(1) {
+       order: 1;
+     }
+     ul li:nth-child(2) {
+       order: 2;
+     }
+     ul li:nth-child(3) {
+       order: 3;
+     }
   }
     /**************** CART ****************/
-.product-container .products .btn {
-  float: right;
-  margin-top: 1rem;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 10px;
-  border: 2px solid #00fefe;
-  border-radius: 20px;
-  color: #00fefe;
-  cursor: pointer;
-  overflow: hidden;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
-  }
-  
-.product-container .products .btn.ok {
-  background-color: rgba(0, 254, 254, 0.4);
+
+.products button {
+  border: 1px solid #2b2d42;
   color: #fff;
-  }
-.product-container .products .btn.ok:after {
-    content: "\e080";
-    color: #fff;
-  }
+  background: #3b8ede;
+  width: 100%;
+  border-radius: 3px;
+  padding: 1em 1em 1em 2em;
+  margin: 1em 0 0 0;
+  cursor: pointer;
+  -webkit-transition: background ease-in .25s;
+  transition: background ease-in .25s;
 
-.product-container .products .btn:hover {
-    padding-right: 25px;
-  }
-.product-container .products .btn:hover:after {
-    margin-left: 5px;
-  }
-.product-container .products .btn:after {
-    font-family: 'simple-line-icons';
-    content: "\e095";
-    -webkit-transition: all .2s ease;
-    transition: all .2s ease;
-    position: absolute;
-    color: #00fefe;
-    margin-left: 30px;
-    transition: all .2s ease;
-  }
-.product-container .products .quickview {
-    position: absolute;
-    margin-top: 2rem;
-    font-size: 14px;
-    color: #00fefe;
-    cursor: pointer;
-  }
-  .product-container .products .quickview:before {
-    font-family: 'simple-line-icons';
-    content: "\e05d";
-    margin-right: 3px;
-  }
+}
 
-  .quickviewContainer {
-    position: fixed;
-    height: 100vh;
-    width: 400px;
-    background: rgba(0, 0, 0, 0.9);
-    top: 70px;
-    right: -100%;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-    padding: 30px;
-    color: #fff;
-  }
-  .quickviewContainer .close {
-    height: 20px;
-    width: 20px;
-    float: right;
-    cursor: pointer;
-  }
-  .quickviewContainer .close:before, .quickviewContainer .close:after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    background-color: #ffF;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  .quickviewContainer .close:after {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  .quickviewContainer .headline {
-    margin-bottom: 30px;
-    font-size: 18px;
-  }
-  .quickviewContainer .description {
-    font-size: 12px;
-    margin-bottom: 20px;
-  }
-  .quickviewContainer img {
-    display: inline-block;
-    border-radius: 4px;
-    margin: 5px;
-  }
-  .quickviewContainer.active {
-    right: 0;
-  }
+.products button:hover {
+  background: #fff;
+  color: #2B2D42;
+}
+.products button:before {
+  font-family: FontAwesome;
+  content: '\f07A';
+  color: #FFF;
+  position: absolute;
+  font-size: 1rem;
+  margin: 0 -1.5em;
+}
+.products button:hover:before {
+  color: #2B2D42;
+}
+
+/**************** Product Overlay ****************/
