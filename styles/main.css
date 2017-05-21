@@ -18,6 +18,9 @@
   nav {
     width: 100%;
     text-align: center;
+    position: fixed;
+    top: 0%;
+    z-index: 1;
   }
 
   nav ul {
@@ -39,6 +42,8 @@
   nav ul a {
     color: #fff;
     text-decoration: none;
+    font-size: 2rem;
+
   }
   .navigation{
     color: #fff;
@@ -54,12 +59,18 @@
     max-height: 10rem;
     padding: 1rem 1rem 0 1rem;
     float: left;
+    position: absolute;
+
+
   }
 
   header h1 {
     padding-top: 3.8rem;
     color: #3b8ede;
-    font-family: 'Anton', sans-serif
+    font-family: 'Anton', sans-serif;
+    margin-top: 4.5rem;
+    margin-left: 6rem;
+    position: relative;
   }
 
   h1 .logo-w {
@@ -69,6 +80,7 @@
   .break {
     display: table;
   }
+
   /**************** ASIDE ****************/
 
   select {
@@ -122,6 +134,7 @@
   }
   /*********** PRODUCTS SECTION ***********/
 
+
   section {
     padding: 0 .75rem;
   }
@@ -149,7 +162,7 @@
   }
 
   .products {
-    height: 42rem;
+    height: 40rem;
     width: 20rem;
     padding: 2%;
     border: 1px solid black;
@@ -208,6 +221,24 @@
      ul li:nth-child(3) {
        order: 3;
      }
+
+     header img {
+       max-height: 10rem;
+       padding: 1rem 1rem 0 1rem;
+       float: left
+       position: absolute;
+     }
+
+     header h1 {
+       padding-top: 3.8rem;
+       color: #3b8ede;
+       font-family: 'Anton', sans-serif;
+       margin-top: 16rem;
+       margin-left: 6rem;
+       position: relative;
+     }
+
+
   }
     /**************** CART ****************/
 
@@ -222,8 +253,9 @@
   cursor: pointer;
   -webkit-transition: background ease-in .25s;
   transition: background ease-in .25s;
-
 }
+
+
 
 .products button:hover {
   background: #fff;
@@ -246,3 +278,41 @@
 }
 
 /**************** Product Overlay ****************/
+.cart i {
+  font-size: 1.5rem;
+}
+.total-text p{
+	display: inline;
+  color: #0f3b65;
+  font-weight: bold;
+}
+
+#cart-items{
+	position: absolute;
+	right: 4rem;
+	top: 10%;
+	background-color: #bdd7f0;
+	padding: 1rem 2rem 5rem;
+	z-index: 999;
+  position: fixed;
+}
+
+#list-item li{
+	margin: 10px 0px;
+}
+
+.remove{
+	background-color: #0f3b65;
+	border-color:  #bdd7f0;
+	border-radius: 50%;
+	color: #fff;
+  font-size: 1rem;
+	margin: 0px 3px;
+	padding: 0px 1px;
+	float: right;
+
+}
+
+#list-item li{
+	margin: 10px 0px;
+}

@@ -17,6 +17,7 @@
 
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/main.css">
+  <script src="jquery.js"></script>
 
   <!-- TODO: replace with your personal Font Awesome CDN link -->
   <script src="https://use.fontawesome.com/93fce1865d.js"></script>
@@ -29,11 +30,30 @@
         <li><a class="navigation" href="#">Hats</a></li>
         <li><a class="navigation" href="#">Gloves</a></li>
         <li><a class="navigation" href="#">Scarves</a></li>
-        <li class="cart-info">
-          <i class="navigation fa fa-shopping-cart" aria-hidden="true"><span class="badge">0</span></i>
+        <li class="navigation cart-info cart">
+            <i class="fa fa-shopping-basket fa-2x"></i>
+            <i class="fa fa-caret-down"></i><br>
+            <div class="total-text">
+              <p>Items</p>
+              <p id="items-basket"></p>
+          </div>
         </li>
       </ul>
     </nav>
+
+
+
+
+    <div id="cart-items">
+  		<ol id="list-item">
+  		</ol>
+  		<div class="total-text">
+  			<p>Total: </p>
+  			<p id="total-price"></p>
+  		</div>
+   </div>
+
+
 
 
     <img src="images/logo-scarfcat.png" alt="dapper cartoon cat wearing a scarf">
@@ -43,7 +63,7 @@
         <span class="break">
           <span class="logo-w">W</span>arehouse
         </span>
-      </h1>
+    </h1>
   </header>
 
   <main>
@@ -81,105 +101,103 @@
           <h2>Scarves</h2>
 
           <div class="product-container">
-
+	<!-- Item 1 -->
             <div class="products">
               <div class="product-image">
-                <h3 class="name">Reversible Plaid</h3>
+                <h3 class="item-name">Reversible Plaid</h3>
                 <img src="images/reversible-plaid.jpg" alt="reversible plaid scarf">
               </div>
               <div class="product-info">
                 <h5 class="description">Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</h5>
                 <h6 class="price">26.99</h6>
-                <button onclick="addItem()" class="add">Add to basket</button>
+                <button id="basket" class="add">Add to basket</button>
               </div>
             </div>
 
             <div class="products">
               <div class="product-image">
-                <h3 class="name">Fringed Plaid</h3>
+                <h3 class="item-name">Fringed Plaid</h3>
                 <img class="product-item" src="images/fringed-plaid.jpeg" alt="fringed plaid scarf">
               </div>
               <div class="product-info">
                 <h5 class="description">Generously sized, extra soft and featuring a dazzling fringe, this scarf is rendered in a versatile gray, black and white plaid. Expertly beat the cold with style. 100% acrylic.</h5>
                 <h6 class="price">18.99</h6>
-                <button onclick="addItem()" class="add">Add to basket</button>
-
+                <button class="add">Add to basket</button>
               </div>
             </div>
 
             <div class="products">
               <div class="product-image">
-                <h3 class="name">Multi Color</h3>
+                <h3 class="item-name">Multi Color</h3>
                 <img src="images/multi-color.jpeg" alt="multi color scarf">
               </div>
               <div class="product-info">
                 <h5 class="description">The Who What Where Oversize Color-Block Square Scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit; soft
                 and lush, it’s your stylish standoff against cold AC and unexpected fall breezes. 100% acrylic.</h5>
                 <h6 class="price">22.99</h6>
-                <button onclick="addItem()" class="add">Add to basket</button>
+                <button class="add">Add to basket</button>
               </div>
             </div>
 
             <div class="products">
               <div class="product-image">
-                <h3>Northern Lights</h3>
+                <h3 class="item-name">Northern Lights</h3>
                 <img src="images/northern-lights.jpg" alt="northern lights scarf">
               </div>
               <div class="product-info">
                 <h5>Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.</h5>
                 <h6 class="price">29.99</h6>
-                <button onclick="addItem()" class="add">Add to basket</button>
+                <button class="add">Add to basket</button>
               </div>
             </div>
 
             <div class="products">
               <div class="product-image">
-                <h3>Ombre Infinity</h3>
+                <h3 class="item-name">Ombre Infinity</h3>
                 <img src="images/ombre-infinity.jpg" alt="ombre infinity scarf">
               </div>
               <div class="product-info">
                 <h5>A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.</h5>
                 <h6 class="price">11.99</h6>
-                <button onclick="addItem()" class="add">Add to basket</button>
+                <button class="add">Add to basket</button>
               </div>
             </div>
 
             <div class="products">
               <div class="product-image">
-                <h3>Ashby Twill</h3>
+                <h3 class="item-name">Ashby Twill</h3>
                 <img src="images/twill.jpg" alt="ashby twill scarf">
               </div>
               <div class="product-info">
                 <h5>Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather
                 gray fringe. 100% Merino wool.</h5>
                 <h6 class="price">70.99</h6>
-                <button onclick="addItem()" class="add">Add to basket</button>
+                <button class="add">Add to basket</button>
               </div>
             </div>
 
             <div class="products">
               <div class="product-image">
-                <h3>Wool Cable Knit</h3>
+                <h3 class="item-name">Wool Cable Knit</h3>
                 <img src="images/wool-cable.jpeg" alt="wool cable knit scarf">
               </div>
               <div class="product-info">
                 <h5>Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.</h5>
                 <h6 class="price">49.99</h6>
-                <button onclick="addItem()" class="add">Add to basket</button>
+                <button  class="add">Add to basket</button>
               </div>
             </div>
 
             <div class="products">
               <div class="product-image">
-                <h3>Etro Paisley-Print Silk</h3>
+                <h3 class='item-name'>Etro Paisley-Print Silk</h3>
                 <img src="images/etro.png" alt="etro paisley print silk scarf">
               </div>
               <div class="product-info">
                 <h5>Luxurious silk scarf with subtle paisley pattern. 100% silk.</h5>
                 <h6 class="price">26.99</h6>
-                <button onclick="addItem()" class="add">Add to basket</button>
+                <button class="add">Add to basket</button>
               </div>
-
             </div>
 
           </div>
