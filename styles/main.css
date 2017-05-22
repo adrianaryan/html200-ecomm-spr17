@@ -246,15 +246,17 @@
   border: 1px solid #2b2d42;
   color: #fff;
   background: #3b8ede;
-  width: 100%;
+  width: 90%;
   border-radius: 3px;
   padding: 1em 1em 1em 2em;
   margin: 1em 0 0 0;
   cursor: pointer;
   -webkit-transition: background ease-in .25s;
   transition: background ease-in .25s;
+  position: absolute;
+  bottom: .5rem;
+  right: 1rem;
 }
-
 
 
 .products button:hover {
@@ -315,4 +317,15 @@
 
 #list-item li{
 	margin: 10px 0px;
+}
+
+.product-container{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.products{
+  position: relative;
 }
